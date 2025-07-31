@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>思考记录</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 颜色设置 - 只需要改这里的颜色值 */
+        :root {
+            --main-color: #2c3e50;     /* 主色调 */
+            --text-color: #333;        /* 文字颜色 */
+            --bg-color: #fafafa;       /* 背景色 */
+            --border-color: #e0e0e0;   /* 边框色 */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 顶部标题 */
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* 导航 */
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 0.95em;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* 内容区域 */
+        section {
+            margin: 60px 0;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* 文章/思考条目 */
+        .entry {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .entry:last-child {
+            border-bottom: none;
+        }
+
+        .entry-date {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .entry-title {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .entry-content {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 标签样式 */
+        .tags {
+            margin-top: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.85em;
+            color: #666;
+            margin-right: 15px;
+            opacity: 0.7;
+        }
+
+        /* 页脚 */
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+
+        /* 简单的响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 网站标题 - 改这里 -->
+    <header>
+        <h1>思考记录</h1>
+    </header>
+
+    <!-- 导航菜单 - 改这里添加/删除菜单 -->
+    <nav>
+        <a href="#recent">最近</a>
+        <a href="#archive">归档</a>
+        <a href="#about">关于</a>
+    </nav>
+
+    <!-- 最近的思考 -->
+    <section id="recent">
+        <h2>最近</h2>
+        
+        <!-- 思考条目1 - 复制这个div来添加新条目 -->
+        <div class="entry">
+            <div class="entry-date">2025.01.28</div>
+            <div class="entry-title">关于专注</div>
+            <div class="entry-content">
+                在信息过载的时代，专注变得越来越困难。我发现关闭所有通知，每天留出固定的思考时间，
+                是保持深度思考能力的有效方法。
+            </div>
+            <div class="tags">
+                <span class="tag">#专注</span>
+                <span class="tag">#思考方法</span>
+            </div>
+        </div>
+
+        <!-- 思考条目2 -->
+        <div class="entry">
+            <div class="entry-date">2025.01.25</div>
+            <div class="entry-title">简单的力量</div>
+            <div class="entry-content">
+                越来越意识到，真正有力量的东西往往是简单的。复杂性常常是我们对本质理解不够深入的表现。
+            </div>
+            <div class="tags">
+                <span class="tag">#简约</span>
+                <span class="tag">#设计</span>
+            </div>
+        </div>
+
+        <!-- 在这里添加更多条目 -->
+        
+    </section>
+
+    <!-- 归档部分 -->
+    <section id="archive">
+        <h2>归档</h2>
+        
+        <div class="entry">
+            <div class="entry-date">2024.12</div>
+            <div class="entry-title">年度总结</div>
+            <div class="entry-content">
+                这一年最大的收获是学会了说"不"。并不是所有的机会都值得把握，
+                专注于少数真正重要的事情，反而能走得更远。
+            </div>
+        </div>
+        
+        <!-- 添加更多归档内容 -->
+        
+    </section>
+
+    <!-- 关于页面 -->
+    <section id="about">
+        <h2>关于</h2>
+        
+        <div class="entry">
+            <div class="entry-content">
+                这是一个记录思考的地方。没有评论，没有点赞，只是安静地记录。
+                <br><br>
+                如果你也喜欢思考，欢迎通过邮件交流：your-email@example.com
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 - 改这里的年份和文字 -->
+    <footer>
+        <p>© 2025</p>
+    </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
